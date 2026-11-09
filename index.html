@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>零下三十七</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- 左：地图 -->
+  <aside id="left">
+    <div class="brand">零下三十七<span>3 号楼</span></div>
+    <div class="clocks">
+      <div class="clk"><b id="clock">07:40</b><span id="day">第 4 天</span></div>
+      <div class="temps">
+        <div><em id="out">-37°</em><i>室外</i></div>
+        <div><em id="in">4°</em><i>楼内</i></div>
+      </div>
+    </div>
+    <div id="map"></div>
+    <div class="legend">
+      <span><i style="background:#4a7fa5"></i>暖</span>
+      <span><i style="background:#8a7038"></i>冷</span>
+      <span><i style="background:#c0713e"></i>很冷</span>
+      <span><i style="background:#a03c46"></i>接近不动</span>
+    </div>
+    <div id="cost"></div>
+    <div id="savebar"><span id="savestate">未存档</span>
+      <button id="memtoggle">看记忆</button>
+      <button id="ovtoggle">全楼</button><button id="newgame">重新开始</button></div>
+  </aside>
+
+  <!-- 中：群聊 -->
+  <main id="center">
+    <div class="chead">
+      <div><b>幸福里 · 3 号楼业主群</b><span>12 户 · 在线 6 人</span></div>
+      <div class="ctrl">
+        <div id="speeds">
+          <button data-s="0">‖</button>
+          <button data-s="1" class="on">×1</button>
+          <button data-s="2">×2</button>
+          <button data-s="4">×4</button>
+        </div>
+        <button id="next" title="推进一段">▶ 一段</button>
+        <button id="pause">暂停</button>
+      </div>
+    </div>
+    <div id="chat"></div>
+    <div id="log"></div>
+    <div class="cinput">
+      <input id="gin" placeholder="以 601 的身份在群里说一句…" maxlength="120">
+      <button id="gsend">发送</button>
+    </div>
+  </main>
+
+  <!-- 右：人物 -->
+  <aside id="right">
+    <div id="panel"></div>
+    <div id="overview" style="display:none"></div>
+    <div id="knockbox" style="display:none"></div>
+    <div id="dmbox"></div>
+  </aside>
+
+</div>
+<script src="js/world.js"></script>
+<script src="js/cast.js"></script>
+<script src="js/save.js"></script>
+<script src="js/spread.js"></script>
+<script src="js/arc.js"></script>
+<script src="js/aftermath.js"></script>
+<script src="js/ending.js"></script>
+<script src="js/repeat.js"></script>
+<script src="js/thread.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/ui.js"></script>
+<script>boot(); setSpeed(1);</script>
+</body>
+</html>
